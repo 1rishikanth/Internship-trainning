@@ -1,0 +1,21 @@
+<%- include("partials/header.ejs") %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/styles/content.css">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/post1" method="post">
+        <h1>SIGN IN</h1>
+        <label for="username">username:</label>
+        <input type="text" id="username" name="username"><br><br>
+        <label for="password">password</label>
+        <input type="password" name="password"><br><br>
+        <button type="submit">sign in</button>
+    </form>
+</body>
+</html>
+<%- include("partials/footer.ejs") %>
