@@ -1,28 +1,19 @@
-<%- include("partials/header.ejs") %>
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../public/styles/content.css">
-    <title>Task2</title>
+    <title>Login</title>
+    <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
     <div class="container">
-        <form action="/post" method="post" enctype="multipart/form-data">
-            <h1>Login</h1>
-            <label for="username">Enter new UserName:</label>
-            <input type="text" id="username" name="username"><br><br>
-            <label for="password">Enter new Password:</label>
-            <input type="text" id="password" name="password"><br><br>
-            <label for="gmail">Email ID:</label>
-            <input type="text" id="gmail" name="gmail"><br><br>
-            <label for="dob">DOB:</label>
-            <input type="date" id="dob" name="dob"><br><br>
-            <label for="image">upload an image of you:</label>
-            <input type="file" id="image" name="image" accept="image/*"><br><br>
-            <button type="submit">Submit</button>
+        <h1>Login</h1>
+        <form action="/login" method="POST">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit">Login</button>
         </form>
+        <p>Don't have an account? <a href="/register">Register</a></p>
     </div>
 </body>
 </html>
